@@ -1,0 +1,36 @@
+public class bubblesort {
+
+    //Объявляем класс
+    public static void main(String[] args) {
+        //Ввожу наш массив чисел
+        Integer []m = {1, 3, 4, 3, 2344, 34, 5654, 65668};
+
+        //Сама сортировка
+        for (int i = 0; i < m.length; i++) {
+            int num = m[i];
+
+            for (int j = i - 1; j >= 0; j--) {
+                int leftNumber = m[j];
+
+                if (num < leftNumber) {
+                    m[j + 1] = leftNumber;
+                    m[j] = num;
+
+                } else {
+                    break;
+                }
+            }
+        }
+
+        //Вывод
+        for (Integer n : m) {
+            System.out.println(n);
+
+
+//        Другой вид печати
+//        System.out.println();
+//        for (int i = 0; i < m.length; i++){
+//            System.out.print(m[i] + " ");
+        }
+    }
+}
